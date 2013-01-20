@@ -1,0 +1,17 @@
+-# This file is app/views/guest_book_comment/index.html/haml
+%h1 All guestbook entries
+
+%table#guest_book
+  %thead
+    %tr
+      %th Author
+      %th Date
+      %th Comment
+  %tbody
+    - @guest_book_entries.each do |entry|
+      %tr
+        %td= entry.title
+        %td= entry.created_at
+        %td= entry.comment
+
+= link_to 'Sign the guestbook', new_guest_book_comment_path

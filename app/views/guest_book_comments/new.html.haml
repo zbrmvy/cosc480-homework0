@@ -1,0 +1,11 @@
+%h1 Yo, sign my guestbook!
+
+= form_tag guest_book_comments_path do
+
+  = label :guest_book_comment, :title, 'Author'
+  = text_field :guest_book_comment, 'title'
+
+  = label :guest_book_comment, :comment, 'Comment'
+  = text_area :guest_book_comment, 'comment'
+
+  = submit_tag 'Save Changes'
